@@ -1,0 +1,166 @@
+/* RecipeList Form */
+.recipe-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+button[type="submit"] {
+  background-color: blueviolet;
+  color: whitesmoke;
+  width: 20%;
+}
+
+.recipe-list {
+  display: flexbox;
+  background: white;
+  padding: 3rem;
+  width: 500px;
+  margin: auto;
+  width: 80%;
+}
+
+.recipe-list ul {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.recipe-item {
+  padding: 1px 1px;
+  display: grid;
+  grid-gap: 0;
+  align-items: center;
+  margin-top: 0rem;
+}
+
+.recipe-list h2 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: blueviolet;
+}
+
+.recipe-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+hr {
+  border: 1px solid #333;
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe-list ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe-item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .recipe form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  button[type="submit"] {
+    background-color: blueviolet;
+    color: whitesmoke;
+    width: 50%;
+  }
+
+  .favorited-recipes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1200px) {
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe-list ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe-item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  button[type="submit"] {
+    background-color: blueviolet;
+    color: whitesmoke;
+    width: 30%;
+  }
+
+  .favorited-recipes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

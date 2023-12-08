@@ -1,0 +1,181 @@
+.app {
+  margin: 5px;
+}
+
+.title {
+  color: white;
+  justify-content: center;
+  display: flex;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/535dafa6e4b00858cf88c74a/1585974017508-JHS36JEB0DXR1BB0KJRZ/HotPot-ThreeWays-Issue003?format=2500w");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 200px;
+}
+
+.header {
+  width: 100%;
+  border: 1px solid rgb(243, 228, 199);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5px 0;
+  background-color: rgb(243, 228, 199);
+}
+
+.content {
+  width: 100%;
+  border: 1px solid rgb(209, 231, 245);
+  margin-top: 5px;
+  background-color: rgb(209, 231, 245);
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.menu-list li {
+  margin-right: 8px;
+}
+
+.exit-button {
+  background-color: lightcoral;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightcoral;
+  color: aliceblue;
+  height: 100%;
+  font-size: 36px;
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  /* .app {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+  } */
+
+  .title {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+  }
+
+  .header {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+  }
+
+  .content {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-list li {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 300px;
+    text-align: left;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 1200px) {
+  .app {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .title {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+  }
+
+  .header {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+  }
+
+  .content {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+  }
+
+  .menu-list {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: auto;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 600px;
+    text-align: left;
+  }  
+}

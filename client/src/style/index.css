@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Tangerine");
+* {
+  font-family: "PT Sans", sans-serif;
+}
+
+.title {
+  font-family: "Tangerine", cursive;
+  font-size: 36px;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+table,
+td {
+  border: 1px solid rgb(0, 141, 184);
+  text-align: center;
+}
+
+thead {
+  background-color: rgb(47, 67, 255);
+  color: #fff;
+}
+
+th {
+  padding: 5px;
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .app {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+

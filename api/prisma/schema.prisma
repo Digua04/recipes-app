@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id                Int      @id @default(autoincrement())
+  email             String   @unique
+  auth0Id           String   @unique @default("")
+  name              String?
+  vegetarian        Boolean?  @default(false)
+  createdRecipes    RecipeItem[]  @relation("createdRecipes")
+  favoritedRecipes  UserRecipe[]
+}
+
+model RecipeItem {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(255)
+  cook_time_minutes  Int
+  video_url   String?  @db.VarChar(255)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   User     @relation("createdRecipes", fields: [createdById], references: [id])
+  createdById Int
+  favoritedBy UserRecipe[]
+}
+
+model UserRecipe {
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
+  recipeId   Int
+  recipe     RecipeItem  @relation(fields: [recipeId], references: [id])
+  @@id([userId, recipeId])
+}
