@@ -21,7 +21,6 @@ export default function LatestFeeds() {
         const response = await fetch(url, options);
         const result = await response.json();
         const newRecipes = result.results[4].items;
-        console.log('fetchData called', newRecipes);
         setRecipesItems(newRecipes);
       } catch (error) {
         console.error(error);

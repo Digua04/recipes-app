@@ -67,14 +67,12 @@ export default function Favorites() {
         }
       );
       const recipes = await data.json();
-      console.log(recipes);
       if (recipes) {
         setFavoritedRecipes(
           recipes.map((recipe) => recipe.recipe));
       }
       else {
         setFavoritedRecipes([]);
-        console.log("no favorited recipes");
       }
     }
     if (accessToken) {

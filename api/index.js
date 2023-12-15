@@ -134,7 +134,6 @@ app.post("/app/recipes", requireAuth, async (req, res) => {
   const auth0Id = req.auth.payload.sub;
 
   const { title, cook_time_minutes, video_url } = req.body;
-  console.log(`Title: "${title}", Cook Time Minutes: "${cook_time_minutes}"`);
   const cook_time_minutes_int = parseInt(cook_time_minutes);
 
   if (!title || !cook_time_minutes) {
@@ -173,7 +172,6 @@ app.delete("/recipes/:id", requireAuth, async (req, res) => {
 // get a RecipeItem by id
 app.get("/recipes/:id", async (req, res) => {
   const id = parseInt(req.params.id);
-  console.log(id);
   const recipeItem = await prisma.recipeItem.findUnique({
     where: {
       id,
@@ -249,7 +247,6 @@ app.get("/app/favorites", requireAuth, async (req, res) => {
       recipe: true,
     },
   });
-  console.log(recipe);
   res.json(recipe);
 } );
 
@@ -307,7 +304,6 @@ app.delete("/app/favorites", requireAuth, async (req, res) => {
       },
     },
   });
-  console.log("Deleted UserRecipe" + userRecipe.recipeId);
 
   res.json(userRecipe);
 } );

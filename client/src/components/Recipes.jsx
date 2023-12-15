@@ -15,7 +15,6 @@ export default function Recipes() {
 
   // insert a new recipe item, passing the accessToken in the Authorization header
   async function insertRecipe(newItemTitle, newItemCookTime, newItemVideoUrl) {
-    console.log(`Title: "${newItemTitle}", Cook Time Minutes: "${newItemCookTime}"`);
     const data = await fetch(`${process.env.REACT_APP_API_URL}/app/recipes`, {
       method: "POST",
       headers: {
@@ -42,13 +41,11 @@ export default function Recipes() {
     e.preventDefault();
 
     if (!newItemTitle || !newItemCookTime) return;
-    console.log(`Title: "${newItemTitle}", Cook Time Minutes: "${newItemCookTime}"`);
     const newRecipe = await insertRecipe(
       newItemTitle,
       newItemCookTime,
       newItemVideoUrl
     );
-    console.log(newRecipe);
     if (newRecipe) {
       setRecipesItems([...recipesItems, newRecipe]);
       setNewItemTitle("");

@@ -39,10 +39,8 @@ export default function ItemRow({
             onClick={(e) => {
               if (favorited) {
                 unfavoriteARecipe(item.id);
-                console.log(`unfavorite id ${item.id}`);
               } else {
                 favoriteARecipe(item.id);
-                console.log(`favorite id ${item.id}`);
               }
             }}
           >

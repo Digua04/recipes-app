@@ -15,7 +15,6 @@ export default function Home() {
     async function getTop5Recipes() {
       const response = await fetch(`${process.env.REACT_APP_API_URL}`);
       const data = await response.json();
-      console.log(data);
       setTop5Recipes(data);
     }
     
